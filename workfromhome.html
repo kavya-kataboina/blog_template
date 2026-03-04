@@ -1,64 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Work From Home Registration</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #e6f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work From Home Registration</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #e6f2f2;
+        color: #333;
+    }
+    .container {
+        max-width: 800px;
+        margin: 30px auto;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+    header {
+        background: #0f766e;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+    header h2 {
+        margin: 10px 0 0;
+        font-size: 20px;
+        color: #ffdd57;
+    }
+    .section {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        flex: 48%;
+        background: #f0fdf4;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .card h3 {
+        margin-top: 0;
+        color: #0f766e;
+    }
+    form {
+        padding: 20px;
+    }
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+    button {
+        background: #0f766e;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #115e59;
+    }
+    .thankyou {
+        display: none;
+        color: green;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .contact-section {
+        text-align: center;
+        padding: 15px;
+        background: #f0fdf4;
+    }
+    .whatsapp-btn {
+        display: inline-block;
+        padding: 10px 15px;
+        background: #25D366;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    .whatsapp-btn:hover {
+        background: #1ebe5d;
+    }
+    @media(max-width: 600px){
+        .card {
+            flex: 100%;
         }
-
-        .form-box {
-            background: white;
-            padding: 25px;
-            width: 350px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        h2 {
-            text-align: center;
-            color: #0f766e;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 8px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #0f766e;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #115e59;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
-<div class="form-box">
-    <h2>Work From Home Registration</h2>
+<div class="container">
+    <header>
+        <h1>WORK FROM HOME</h1>
+        <h2>LIFE-CHANGING OPPORTUNITY</h2>
+    </header>
 
-    <form action="https://formsubmit.co/your-kataboinakavya@gmail.com" method="POST">
+    <div class="section">
+        <div class="card">
+            <h3>Roles</h3>
+            <p>Full & Part Time Available</p>
+        </div>
+        <div class="card">
+            <h3>Essentials</h3>
+            <p>Smartphone, Internet & Flexible Timings (3 Hrs Daily)</p>
+        </div>
+        <div class="card">
+            <h3>Who Can Apply?</h3>
+            <p>Students, Housewives, Professionals & Retirees</p>
+        </div>
+        <div class="card">
+            <h3>Qualification</h3>
+            <p>High School, Intermediate & Graduate Degree</p>
+        </div>
+    </div>
 
+    <form id="jobForm" action="https://formsubmit.co/kataboinakavya@gmail.com" method="POST" target="_blank">
         <input type="text" name="Full Name" placeholder="Full Name" required>
-
         <input type="tel" name="Phone Number" placeholder="Phone Number" required>
-
         <input type="email" name="Email" placeholder="Email Address" required>
 
         <select name="Category" required>
@@ -83,11 +158,27 @@
         </select>
 
         <input type="hidden" name="_captcha" value="false">
-
         <button type="submit">Register Now</button>
-
     </form>
+
+    <div class="thankyou" id="thankYouMessage">
+        ✅ Thank you! Your application has been submitted.
+    </div>
+
+    <div class="contact-section">
+        <p>Or contact us directly via WhatsApp:</p>
+        <a class="whatsapp-btn" href="https://wa.me/6302583939" target="_blank">Chat on WhatsApp</a>
+    </div>
 </div>
+
+<script>
+    const form = document.getElementById('jobForm');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function() {
+        thankYou.style.display = 'block';
+    });
+</script>
 
 </body>
 </html>
