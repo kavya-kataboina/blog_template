@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Work From Home Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e6f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-box {
+            background: white;
+            padding: 25px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #0f766e;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #0f766e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #115e59;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Work From Home Registration</h2>
+
+    <form action="https://formsubmit.co/your-kataboinakavya@gmail.com" method="POST">
+
+        <input type="text" name="Full Name" placeholder="Full Name" required>
+
+        <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+
+        <input type="email" name="Email" placeholder="Email Address" required>
+
+        <select name="Category" required>
+            <option value="">Who are you?</option>
+            <option>Student</option>
+            <option>House Wife</option>
+            <option>Professional</option>
+            <option>Retired Person</option>
+        </select>
+
+        <select name="Qualification" required>
+            <option value="">Select Qualification</option>
+            <option>High School</option>
+            <option>Intermediate</option>
+            <option>Graduate</option>
+        </select>
+
+        <select name="Work Type" required>
+            <option value="">Work Type</option>
+            <option>Full Time</option>
+            <option>Part Time (3 Hrs Daily)</option>
+        </select>
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Register Now</button>
+
+    </form>
+</div>
+
+</body>
+</html>
